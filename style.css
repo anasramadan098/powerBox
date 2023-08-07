@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+.space {
+    padding: 0 80px;
+}
+
+/*  */
+header {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+header img {
+    max-width: 150px;
+    cursor: pointer;
+}
+header .logo i {
+    color: #f9c904;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+header .cart i{
+    color: #f9c904;
+}
+header .cart{
+    position: relative;
+    cursor: pointer;
+}
+header .cart::after{
+    content: '1';
+    position: absolute;
+    right: 0;
+    top: -10px;
+    font-size: 12px;
+}
+header .search-input {
+    background: #fff url(https://assets.salla.cloud/themes/theme_6/assets/img/search.svg) right 0.5rem center no-repeat;
+    box-shadow: 0 4px 7px 0 rgba(0,0,0,.08);
+    padding: 15px 35px;
+    border: 1px solid #37b8eb45;
+    border-radius: 10px;
+    color: #f9c904;
+    width: 30%;
+}
+header .search-input:focus {
+    outline: none;
+}
+
+/* End Header */
+p.page-info {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+section.cart  {
+    background-color: #eee;
+}
+.info-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 80px;
+}
+.info-icons div {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+.info-icons div.item::before {
+    content:   attr(data);
+    position: absolute;
+    right: 32%;
+    top: -22px;
+    font-size: 10px;
+    background: #999;
+    padding: 3px 6px;
+    border-radius: 6px;
+    color: #fff;
+}
+.info-icons div.item::after {
+    content: '1';
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #999;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    background: #f9c904;
+}
+.info-icons div i{
+    font-size: 2.5em;
+    color: #555;
+}
+.product {
+    position: relative;
+    padding: 0 80px 20px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.07);
+    width: 600px;
+}
+.product .remove {
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.product img {
+    max-width: 100px;
+}
+.product h3.title  {
+    color: #777;
+    font-size: 14px;
+}
+.product > span.price {
+    color: #f9c904;
+}
+.product p.note {
+    background-color: #4caf50;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    color: #fff;
+}
+.product p.f-price {
+    color: #999;
+}
+.product label {
+    color: #333;
+}
+.product input {
+    text-align: center;
+    width: 50px;
+}
+.last-price {
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 800px;
+}
+
+.pay {
+    position: relative;
+    padding: 20px;
+    padding-bottom: 50px;
+    margin: 60px auto 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.07);
+    width: 600px;
+}
+.pay > p {
+    color: #333;
+}
+.pay > div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.pay  select,
+.pay input[type="text"]{
+    color: #f9c904;
+    padding: 5px 15px;
+    width: 200px;
+    border-radius: 6px;
+    background-color: #fff;
+    outline: none;
+    border: 1px solid #000;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.payBtn {
+    background: #525252;
+    padding: 12px;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 3px;
+    margin-bottom: 50px;
+    transition:.3s;
+}
+.payBtn:hover {
+    transform: scale(1.2);
+}
+.payBtnDiv {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+} 
+
+
+@media screen and (max-width: 480px) {
+    .space {
+        padding: 0 10px;
+    }
+
+    header .search-input {
+        padding: 10px 25px;
+        width: 160px;
+    }
+
+    .info-icons div.item::before {
+        font-size: 8px;
+    }
+
+    .info-icons div.item::after {
+        font-size: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .product {
+        padding: 0 10px 20px;
+        width: 100%;
+    }
+
+    .product img {
+        max-width: 80px;
+    }
+
+    .product h3.title {
+        font-size: 12px;
+    }
+
+    .product input {
+        width: 40px;
+    }
+
+    .last-price {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .pay {
+        padding: 10px;
+        padding-bottom: 30px;
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    .pay > p {
+        font-size: 12px;
+    }
+
+    .pay select,
+    .pay input[type="text"] {
+        padding: 3px 10px;
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .payBtn {
+        padding: 8px;
+        font-size: 11px;
+    }
+    .info-icons {
+        padding: 0;
+    }
+}
